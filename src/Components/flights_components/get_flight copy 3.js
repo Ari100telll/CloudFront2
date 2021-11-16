@@ -4,7 +4,7 @@ import StyledTextBlock from '../block/textBlock'
 import StyledLi from "../block/styled_li";
 import URL_ from "../../constants";
 
-class GetFlight1 extends React.Component {
+class GetFlight3 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,7 +19,7 @@ class GetFlight1 extends React.Component {
 
     MINUTE_MS = 2000;
     componentDidMount() {
-                fetch(URL_ + "getFlight/6").then(res => res.json())
+                fetch(URL_ + "getFlight/8").then(res => res.json())
                 .then(
                     (result) => {
                         console.log(result);
@@ -36,7 +36,7 @@ class GetFlight1 extends React.Component {
                 );
     }
     componentDidUpdate() {
-            fetch(URL_ + "getFlight/6").then(res => res.json())
+            fetch(URL_ + "getFlight/8").then(res => res.json())
             .then(
                 (result) => {
                     console.log(result);
@@ -67,10 +67,9 @@ class GetFlight1 extends React.Component {
                         airplane_id: {item.airplane_id}<br />
                     </StyledLi>
                 </StyledTextBlock> 
-
             </div>
         );
     }
 }
 
-export default GetFlight1;
+export default GetFlight3;

@@ -4,7 +4,7 @@ import StyledTextBlock from '../block/textBlock'
 import StyledLi from "../block/styled_li";
 import URL_ from "../../constants";
 
-class GetFlight1 extends React.Component {
+class GetFlight4 extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -19,24 +19,24 @@ class GetFlight1 extends React.Component {
 
     MINUTE_MS = 2000;
     componentDidMount() {
-                fetch(URL_ + "getFlight/6").then(res => res.json())
-                .then(
-                    (result) => {
-                        console.log(result);
-                        this.setState({
-                            isLoaded: true,
-                            console,
-                            item: result
-                        });
-                    },
-                    (error) => {
-                        this.setState({
-                        });
-                    }
-                );
+        fetch(URL_ + "getFlight/9").then(res => res.json())
+            .then(
+                (result) => {
+                    console.log(result);
+                    this.setState({
+                        isLoaded: true,
+                        console,
+                        item: result
+                    });
+                },
+                (error) => {
+                    this.setState({
+                    });
+                }
+            );
     }
     componentDidUpdate() {
-            fetch(URL_ + "getFlight/6").then(res => res.json())
+        fetch(URL_ + "getFlight/9").then(res => res.json())
             .then(
                 (result) => {
                     console.log(result);
@@ -53,6 +53,8 @@ class GetFlight1 extends React.Component {
                 }
             );
     }
+
+
     render() {
         const { error, isLoaded, item, i, outp_fil, inp_fil } = this.state;
         return (
@@ -66,11 +68,11 @@ class GetFlight1 extends React.Component {
                         status: {item.status}<br />
                         airplane_id: {item.airplane_id}<br />
                     </StyledLi>
-                </StyledTextBlock> 
+                </StyledTextBlock>
 
             </div>
         );
     }
 }
 
-export default GetFlight1;
+export default GetFlight4;

@@ -11,7 +11,10 @@ import DeleteAirplain from './Components/airplains_components/delete_airplain';
 import CreateAirplain from './Components/airplains_components/create_airplain';
 
 import GetAllFlights from './Components/flights_components/get_all_flight';
-import GetFlight from './Components/flights_components/get_flight';
+import GetFlight1 from './Components/flights_components/get_flight';
+import GetFlight2 from './Components/flights_components/get_flight copy';
+import GetFlight3 from './Components/flights_components/get_flight copy 3';
+import GetFlight4 from './Components/flights_components/get_flight copy 2';
 import EditFlight from './Components/flights_components/edit_flight';
 import DeleteFlight from './Components/flights_components/delete_flight';
 import CreateFlight from './Components/flights_components/create_flight';
@@ -21,25 +24,27 @@ function App() {
   return (
     <div className="App">
       <header className="App-header" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'flex-start' }}>
-        <StyledBlock>
-
-          <div>Airpale</div>
-
-          <GetAllAirplains style={{ display: 'flex', flexDirection: 'column' }} />
-          <GetAirplain style={{ display: 'flex', flexDirection: 'column' }} />
-          <EditAirplain style={{ display: 'flex', flexDirection: 'column' }} />
-          <DeleteAirplain style={{ display: 'flex', flexDirection: 'column' }} />
-          <CreateAirplain style={{ display: 'flex', flexDirection: 'column' }} />
-          {/* <MyComponent style={{display: 'flex',flexDirection: 'column'}}/>  */}
-        </StyledBlock>
-        <StyledBlock>
-          <div>flight</div>
-          <GetAllFlights style={{ display: 'flex', flexDirection: 'column' }} />
-          <GetFlight style={{ display: 'flex', flexDirection: 'column' }} />
-          <EditFlight style={{ display: 'flex', flexDirection: 'column' }} />
-          <DeleteFlight style={{ display: 'flex', flexDirection: 'column' }} />
-          <CreateFlight style={{ display: 'flex', flexDirection: 'column' }} />
-        </StyledBlock>
+        <div>
+          <StyledBlock>
+            <div>flight 6</div>
+            <GetFlight1 style={{ display: 'flex', flexDirection: 'column' }} />
+          </StyledBlock>
+          <StyledBlock>
+            <div>flight 7</div>
+            <GetFlight2 style={{ display: 'flex', flexDirection: 'column' }} />
+          </StyledBlock>
+        </div>
+        <br />
+        <div>
+          <StyledBlock>
+            <div>flight 8</div>
+            <GetFlight3 style={{ display: 'flex', flexDirection: 'column' }} />
+          </StyledBlock>
+          <StyledBlock>
+            <div>flight 9</div>
+            <GetFlight4 style={{ display: 'flex', flexDirection: 'column' }} />
+          </StyledBlock>
+        </div>
       </header>
     </div>
   );

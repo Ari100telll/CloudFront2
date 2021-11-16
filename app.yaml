@@ -1,0 +1,14 @@
+env: standard
+runtime: nodejs10
+service: new-app
+vpc_access_connector:
+  name: projects/teak-inquiry-326709/locations/us-west3/connectors/newbull
+handlers:
+  - url: /static
+    static_dir: build/static
+  - url: /(.*\.(json|ico|js))$
+    static_files: build/\1
+    upload: build/.*\.(json|ico|js)$
+  - url: .*
+    static_files: build/index.html
+    upload: build/index.html
